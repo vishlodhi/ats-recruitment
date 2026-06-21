@@ -1,12 +1,17 @@
 
 import { useForm } from 'react-hook-form'
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const navigate = useNavigate();
     const onSubmit = (data) => {
         console.log(data);
+        toast.success('Login Successful');
+        navigate('/dashboard');
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
