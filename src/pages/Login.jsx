@@ -18,8 +18,9 @@ const Login = () => {
                     </div>
                     <div className='flex items-center gap-4'>
                         <p>Enter Password</p> <input type="password" {...register('password', { required: true })} placeholder='password' />
-                         {errors.password && <p>Password is required</p>}
+                        {errors.password && <p>Password is required</p>}
                     </div>
+                    <button type='submit'>Login</button>
                 </div>
             </div>
         </form>
